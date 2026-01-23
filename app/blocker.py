@@ -8,12 +8,20 @@ when daily goal is NOT met. Runs independently of UI.
 import time
 import logging
 import psutil
+from queue import Queue
 from . import state_manager
 
 logger = logging.getLogger(__name__)
 
 # Poll interval in seconds
 POLL_INTERVAL = 1.5
+
+# Notification queue for UI
+notification_queue = Queue()
+
+# Track recently killed processes to avoid spam notifications
+recently_killed = {}
+NOTIFICATION_COOLDOWN = 30  # seconds
 
 
 def start_enforcer():
@@ -64,6 +72,13 @@ def start_enforcer():
                             # Kill the process immediately
                             proc.kill()
                             logger.warning(f"Killed blocked process: {proc_name} (PID: {proc.pid})")
+                            
+                            # Queue notification (avoid spam with cooldown)
+                            current_time = time.time()
+                            if proc_name not in recently_killed or \
+                               (current_time - recently_killed[proc_name]) > NOTIFICATION_COOLDOWN:
+                                notification_queue.put(("block", proc_name))
+                                recently_killed[proc_name] = current_time
                     
                     except (psutil.NoSuchProcess, psutil.AccessDenied):
                         # Process disappeared or no permission to kill
@@ -129,3 +144,18 @@ def get_blocked_processes():
         logger.error(f"Error getting blocked processes: {e}")
     
     return blocked_list
+
+def get_pending_notifications():
+    """
+    Get all pending notifications from the queue.
+    
+    Returns:
+        list: List of (notification_type, data) tuples
+    """
+    notifications = []
+    while not notification_queue.empty():
+        try:
+            notifications.append(notification_queue.get_nowait())
+        except:
+            break
+    return notifications

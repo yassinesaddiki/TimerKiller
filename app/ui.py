@@ -1,7 +1,7 @@
 """
 User Interface Module for TimerKiller
 
-Minimal PySide6-based UI for controlling timer and managing blocked apps.
+Enhanced PySide6-based UI with goal editing, process selector, and notifications.
 """
 
 import sys
@@ -9,12 +9,13 @@ import logging
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QPushButton, QListWidget, QListWidgetItem,
-    QInputDialog, QMessageBox
+    QInputDialog, QMessageBox, QSpinBox, QDialog, QComboBox
 )
 from PySide6.QtCore import QTimer, Qt
 from PySide6.QtGui import QFont
 
-from . import state_manager, pomodoro, blocker
+from . import state_manager, pomodoro, blocker, game_detection
+from .notifications import BlockingNotificationDialog
 
 logger = logging.getLogger(__name__)
 
@@ -37,6 +38,13 @@ class TimerKillerUI(QMainWindow):
         self.goal_label = QLabel()
         self.goal_label.setFont(QFont("Arial", 11, QFont.Bold))
         goal_layout.addWidget(self.goal_label)
+        
+        # Edit goal button
+        self.edit_goal_button = QPushButton("✏️ Edit Goal")
+        self.edit_goal_button.setMaximumWidth(100)
+        self.edit_goal_button.clicked.connect(self.on_edit_goal_clicked)
+        goal_layout.addWidget(self.edit_goal_button)
+        
         main_layout.addLayout(goal_layout)
         
         # ===== TIMER DISPLAY SECTION =====
@@ -72,7 +80,7 @@ class TimerKillerUI(QMainWindow):
         main_layout.addWidget(apps_title)
         
         self.apps_list = QListWidget()
-        self.apps_list.setMaximumHeight(150)
+        self.apps_list.setMaximumHeight(120)
         main_layout.addWidget(self.apps_list)
         
         # ===== APP MANAGEMENT BUTTONS =====
@@ -81,6 +89,10 @@ class TimerKillerUI(QMainWindow):
         self.add_app_button = QPushButton("+ Add App")
         self.add_app_button.clicked.connect(self.on_add_app_clicked)
         app_buttons_layout.addWidget(self.add_app_button)
+        
+        self.process_selector_button = QPushButton("🎮 Select Games")
+        self.process_selector_button.clicked.connect(self.on_process_selector_clicked)
+        app_buttons_layout.addWidget(self.process_selector_button)
         
         self.remove_app_button = QPushButton("- Remove App")
         self.remove_app_button.clicked.connect(self.on_remove_app_clicked)
@@ -102,6 +114,9 @@ class TimerKillerUI(QMainWindow):
     def refresh_display(self):
         """Update all UI elements from current state."""
         try:
+            # Check for pending notifications from blocker
+            self.process_notifications()
+            
             # Update goal and progress
             goal = state_manager.get_daily_goal()
             focused = state_manager.get_focused_minutes()
@@ -129,6 +144,18 @@ class TimerKillerUI(QMainWindow):
         
         except Exception as e:
             logger.error(f"Error refreshing display: {e}")
+    
+    def process_notifications(self):
+        """Process and display pending notifications from blocker."""
+        try:
+            notifications = blocker.get_pending_notifications()
+            for notif_type, data in notifications:
+                if notif_type == "block":
+                    # Show blocking notification
+                    dialog = BlockingNotificationDialog(data, self)
+                    dialog.show_modal()
+        except Exception as e:
+            logger.error(f"Error processing notifications: {e}")
     
     def on_start_clicked(self):
         """Start focus session button clicked."""
@@ -183,6 +210,43 @@ class TimerKillerUI(QMainWindow):
             QMessageBox.critical(self, "Error", f"Failed to remove app: {e}")
             logger.error(f"Error removing app: {e}")
     
+    def on_edit_goal_clicked(self):
+        """Edit daily focus goal button clicked."""
+        try:
+            current_goal = state_manager.get_daily_goal()
+            new_goal, ok = QInputDialog.getInt(
+                self,
+                "Edit Daily Goal",
+                "Enter your daily focus goal (in minutes):",
+                value=current_goal,
+                minValue=1,
+                maxValue=1440,
+                step=15
+            )
+            
+            if ok:
+                state_manager.set_daily_goal(new_goal)
+                self.refresh_display()
+                QMessageBox.information(
+                    self,
+                    "Goal Updated",
+                    f"Daily goal updated to {new_goal} minutes!"
+                )
+                logger.info(f"Daily goal changed to: {new_goal} minutes")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Failed to edit goal: {e}")
+            logger.error(f"Error editing goal: {e}")
+    
+    def on_process_selector_clicked(self):
+        """Open process selector dialog for easy game blocking."""
+        try:
+            dialog = ProcessSelectorDialog(self)
+            dialog.exec()
+            self.update_blocked_apps_list()
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Failed to open process selector: {e}")
+            logger.error(f"Error in process selector: {e}")
+    
     def update_blocked_apps_list(self):
         """Sync UI list with state_manager."""
         try:
@@ -202,3 +266,177 @@ class TimerKillerUI(QMainWindow):
         """
         logger.info("UI window closing. Enforcer thread continues in background.")
         event.accept()
+
+
+class ProcessSelectorDialog(QDialog):
+    """
+    Dialog for easy process/game selection.
+    Shows categorized list of running processes and common games.
+    """
+    
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Select Games to Block")
+        self.setGeometry(150, 150, 500, 400)
+        self.blocked_apps = set(state_manager.get_blocked_apps())
+        
+        layout = QVBoxLayout()
+        
+        # Category selector
+        category_layout = QHBoxLayout()
+        category_layout.addWidget(QLabel("Category:"))
+        
+        self.category_combo = QComboBox()
+        self.category_combo.addItems(["All", "Common Games", "Running Processes"])
+        self.category_combo.currentTextChanged.connect(self.on_category_changed)
+        category_layout.addWidget(self.category_combo)
+        layout.addLayout(category_layout)
+        
+        # Process list
+        self.process_list = QListWidget()
+        layout.addWidget(self.process_list)
+        
+        # Buttons
+        button_layout = QHBoxLayout()
+        
+        add_selected_btn = QPushButton("✅ Add Selected")
+        add_selected_btn.clicked.connect(self.on_add_selected)
+        button_layout.addWidget(add_selected_btn)
+        
+        remove_selected_btn = QPushButton("❌ Remove Selected")
+        remove_selected_btn.clicked.connect(self.on_remove_selected)
+        button_layout.addWidget(remove_selected_btn)
+        
+        close_btn = QPushButton("Close")
+        close_btn.clicked.connect(self.accept)
+        button_layout.addWidget(close_btn)
+        
+        layout.addLayout(button_layout)
+        self.setLayout(layout)
+        
+        # Load initial list
+        self.on_category_changed("All")
+    
+    def on_category_changed(self, category):
+        """Update process list based on selected category."""
+        self.process_list.clear()
+        
+        if category == "All":
+            self.populate_all_processes()
+        elif category == "Common Games":
+            self.populate_common_games()
+        elif category == "Running Processes":
+            self.populate_running_processes()
+    
+    def populate_common_games(self):
+        """Populate list with common game executables."""
+        common_games = game_detection.get_common_games()
+        for game in sorted(common_games):
+            self.add_process_item(game)
+    
+    def populate_running_processes(self):
+        """Populate list with currently running processes."""
+        try:
+            import psutil
+            processes = []
+            for proc in psutil.process_iter(['name']):
+                try:
+                    processes.append(proc.name())
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    pass
+            
+            # Categorize and display
+            categorized = game_detection.categorize_processes(processes)
+            
+            for category, procs in categorized.items():
+                if procs:
+                    header = QListWidgetItem(f"--- {category} ---")
+                    header.setFlags(header.flags() & ~Qt.ItemIsSelectable)
+                    self.process_list.addItem(header)
+                    
+                    for proc in sorted(set(procs)):
+                        self.add_process_item(proc)
+        
+        except Exception as e:
+            logger.error(f"Error fetching running processes: {e}")
+    
+    def populate_all_processes(self):
+        """Populate with both common games and running processes."""
+        # First add common games
+        common_games = game_detection.get_common_games()
+        header = QListWidgetItem("--- Common Games ---")
+        header.setFlags(header.flags() & ~Qt.ItemIsSelectable)
+        self.process_list.addItem(header)
+        
+        for game in sorted(common_games):
+            self.add_process_item(game)
+        
+        # Then add running processes
+        try:
+            import psutil
+            running_games = []
+            for proc in psutil.process_iter(['name']):
+                try:
+                    name = proc.name()
+                    if game_detection.is_game_process(name):
+                        running_games.append(name)
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    pass
+            
+            if running_games:
+                header = QListWidgetItem("--- Running Games ---")
+                header.setFlags(header.flags() & ~Qt.ItemIsSelectable)
+                self.process_list.addItem(header)
+                
+                for game in sorted(set(running_games)):
+                    self.add_process_item(game)
+        except Exception as e:
+            logger.error(f"Error fetching running games: {e}")
+    
+    def add_process_item(self, process_name):
+        """Add a process to the list with checkbox styling."""
+        item = QListWidgetItem(process_name)
+        item.setFlags(item.flags() | Qt.ItemIsSelectable | Qt.ItemIsEnabled)
+        
+        # Check if already blocked
+        if process_name.lower() in [app.lower() for app in self.blocked_apps]:
+            item.setText(f"✓ {process_name}")
+            item.setSelected(True)
+        
+        self.process_list.addItem(item)
+    
+    def on_add_selected(self):
+        """Add selected processes to blocked list."""
+        try:
+            selected_items = self.process_list.selectedItems()
+            for item in selected_items:
+                app_name = item.text().replace("✓ ", "")
+                if app_name.startswith("---"):
+                    continue
+                
+                state_manager.add_blocked_app(app_name)
+                item.setText(f"✓ {app_name}")
+            
+            logger.info(f"Added {len(selected_items)} apps to blocked list")
+            QMessageBox.information(self, "Success", f"Added {len(selected_items)} app(s)!")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Failed to add apps: {e}")
+            logger.error(f"Error adding apps: {e}")
+    
+    def on_remove_selected(self):
+        """Remove selected processes from blocked list."""
+        try:
+            selected_items = self.process_list.selectedItems()
+            for item in selected_items:
+                app_name = item.text().replace("✓ ", "")
+                if app_name.startswith("---"):
+                    continue
+                
+                state_manager.remove_blocked_app(app_name)
+                item.setText(app_name)
+            
+            logger.info(f"Removed {len(selected_items)} apps from blocked list")
+            QMessageBox.information(self, "Success", f"Removed {len(selected_items)} app(s)!")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Failed to remove apps: {e}")
+            logger.error(f"Error removing apps: {e}")
