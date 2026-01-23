@@ -4,7 +4,9 @@
   "pomodoro_active": false,
   "pomodoro_start_ts": null,
   "blocked_apps": [
-    "chrome.exe"
+    "Albion-Online.exe",
+    "VALORANT-Win64-Shipping.exe",
+    "RiotClientServices.exe"
   ],
   "last_reset_date": "2026-01-23"
 }

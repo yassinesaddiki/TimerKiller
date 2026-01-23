@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QInputDialog, QMessageBox, QSpinBox, QDialog, QComboBox
 )
 from PySide6.QtCore import QTimer, Qt
-from PySide6.QtGui import QFont
+from PySide6.QtGui import QFont, QColor, QPainter, QBrush, QPen
 
 from . import state_manager, pomodoro, blocker, game_detection
 from .notifications import BlockingNotificationDialog
@@ -27,6 +27,8 @@ class TimerKillerUI(QMainWindow):
         super().__init__()
         self.setWindowTitle("TimerKiller")
         self.setGeometry(100, 100, 400, 500)
+        # Fixed window size - user cannot resize
+        self.setFixedSize(400, 500)
         
         # Create central widget and main layout
         central_widget = QWidget()
@@ -49,9 +51,8 @@ class TimerKillerUI(QMainWindow):
         
         # ===== TIMER DISPLAY SECTION =====
         timer_layout = QVBoxLayout()
-        self.timer_display = QLabel("00:00:00")
-        self.timer_display.setFont(QFont("Arial", 36, QFont.Bold))
-        self.timer_display.setAlignment(Qt.AlignCenter)
+        self.timer_display = TimerCircle()
+        self.timer_display.setMinimumHeight(180)
         timer_layout.addWidget(self.timer_display)
         
         self.status_label = QLabel("Status: Idle")
@@ -125,12 +126,13 @@ class TimerKillerUI(QMainWindow):
             # Update timer display
             if pomodoro.is_session_active():
                 elapsed = pomodoro.get_formatted_elapsed()
-                self.timer_display.setText(elapsed)
+                elapsed_sec = pomodoro.get_elapsed_seconds()
+                self.timer_display.update_timer(elapsed, elapsed_sec)
                 self.status_label.setText("Status: Running")
                 self.start_button.setEnabled(False)
                 self.pause_button.setEnabled(True)
             else:
-                self.timer_display.setText("00:00:00")
+                self.timer_display.update_timer("00:00:00", 0)
                 self.status_label.setText("Status: Paused")
                 self.start_button.setEnabled(True)
                 self.pause_button.setEnabled(False)
@@ -440,3 +442,69 @@ class ProcessSelectorDialog(QDialog):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Failed to remove apps: {e}")
             logger.error(f"Error removing apps: {e}")
+
+
+class TimerCircle(QWidget):
+    """Custom circular timer display with progress animation."""
+    
+    def __init__(self):
+        super().__init__()
+        self.time_str = "00:00:00"
+        self.elapsed_seconds = 0
+        self.max_seconds = 25 * 60  # 25 minutes in seconds
+        self.setStyleSheet("background-color: transparent;")
+    
+    def update_timer(self, time_str, elapsed_sec):
+        """Update timer display with time string and elapsed seconds."""
+        self.time_str = time_str
+        self.elapsed_seconds = elapsed_sec
+        # Cap at max to avoid over-filling circle
+        if elapsed_sec > self.max_seconds:
+            self.elapsed_seconds = self.max_seconds
+        self.update()  # Trigger repaint
+    
+    def paintEvent(self, event):
+        """Draw circular timer with progress."""
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing)
+        
+        # Get widget dimensions
+        rect = self.rect()
+        center_x = rect.width() // 2
+        center_y = rect.height() // 2
+        radius = min(rect.width(), rect.height()) // 2 - 20
+        
+        # Draw background circle
+        bg_color = QColor("#2a2a4e")
+        painter.setBrush(QBrush(bg_color))
+        painter.setPen(QPen(QColor("#3a3a5e"), 2))
+        painter.drawEllipse(center_x - radius, center_y - radius, radius * 2, radius * 2)
+        
+        # Draw progress arc
+        progress = self.elapsed_seconds / self.max_seconds if self.max_seconds > 0 else 0
+        progress = min(progress, 1.0)  # Cap at 100%
+        
+        progress_color = QColor("#e74c3c") if progress > 0 else QColor("#3498db")
+        painter.setPen(QPen(progress_color, 4))
+        painter.setBrush(Qt.NoBrush)
+        
+        # Draw arc (16ths of degree = 1/360th)
+        start_angle = 90 * 16  # Start at top
+        span_angle = int(-progress * 360 * 16)  # Clockwise
+        painter.drawArc(
+            center_x - radius, center_y - radius,
+            radius * 2, radius * 2,
+            start_angle, span_angle
+        )
+        
+        # Draw center text
+        painter.setFont(QFont("Arial", 32, QFont.Bold))
+        painter.setPen(QPen(QColor("white")))
+        painter.drawText(
+            rect,
+            Qt.AlignCenter,
+            self.time_str
+        )
+        
+        painter.end()
+
