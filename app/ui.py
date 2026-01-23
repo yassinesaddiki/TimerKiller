@@ -9,12 +9,12 @@ import logging
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QPushButton, QListWidget, QListWidgetItem,
-    QInputDialog, QMessageBox, QSpinBox, QDialog, QComboBox
+    QInputDialog, QMessageBox, QSpinBox, QDialog, QComboBox, QCheckBox
 )
 from PySide6.QtCore import QTimer, Qt
 from PySide6.QtGui import QFont, QColor, QPainter, QBrush, QPen
 
-from . import state_manager, pomodoro, blocker, game_detection
+from . import state_manager, pomodoro, blocker, game_detection, startup
 from .notifications import BlockingNotificationDialog
 
 logger = logging.getLogger(__name__)
@@ -74,6 +74,15 @@ class TimerKillerUI(QMainWindow):
         button_layout.addWidget(self.pause_button)
         
         main_layout.addLayout(button_layout)
+        
+        # ===== STARTUP SETTINGS =====
+        settings_layout = QHBoxLayout()
+        self.startup_checkbox = QCheckBox("Start on Windows Startup")
+        self.startup_checkbox.setChecked(startup.is_startup_enabled())
+        self.startup_checkbox.stateChanged.connect(self.on_startup_toggled)
+        settings_layout.addWidget(self.startup_checkbox)
+        settings_layout.addStretch()
+        main_layout.addLayout(settings_layout)
         
         # ===== BLOCKED APPS SECTION =====
         apps_title = QLabel("Blocked Applications:")
@@ -158,6 +167,27 @@ class TimerKillerUI(QMainWindow):
                     dialog.show_modal()
         except Exception as e:
             logger.error(f"Error processing notifications: {e}")
+    
+    def on_startup_toggled(self):
+        """Handle startup checkbox toggle."""
+        try:
+            if self.startup_checkbox.isChecked():
+                success = startup.enable_startup()
+                if success:
+                    logger.info("Startup enabled")
+                else:
+                    self.startup_checkbox.setChecked(False)
+                    QMessageBox.warning(self, "Error", "Failed to enable startup. Run as administrator?")
+            else:
+                success = startup.disable_startup()
+                if success:
+                    logger.info("Startup disabled")
+                else:
+                    self.startup_checkbox.setChecked(True)
+                    QMessageBox.warning(self, "Error", "Failed to disable startup")
+        except Exception as e:
+            logger.error(f"Error toggling startup: {e}")
+            QMessageBox.critical(self, "Error", f"Failed to toggle startup: {e}")
     
     def on_start_clicked(self):
         """Start focus session button clicked."""

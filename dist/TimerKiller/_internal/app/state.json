@@ -1,0 +1,12 @@
+{
+  "daily_goal_minutes": 180,
+  "focused_minutes_today": 1,
+  "pomodoro_active": false,
+  "pomodoro_start_ts": null,
+  "blocked_apps": [
+    "Albion-Online.exe",
+    "VALORANT-Win64-Shipping.exe",
+    "RiotClientServices.exe"
+  ],
+  "last_reset_date": "2026-01-23"
+}
