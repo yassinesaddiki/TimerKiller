@@ -1,6 +1,6 @@
 {
   "daily_goal_minutes": 180,
-  "focused_minutes_today": 1,
+  "focused_minutes_today": 0,
   "pomodoro_active": false,
   "pomodoro_start_ts": null,
   "blocked_apps": [
@@ -8,5 +8,5 @@
     "VALORANT-Win64-Shipping.exe",
     "RiotClientServices.exe"
   ],
-  "last_reset_date": "2026-01-23"
+  "last_reset_date": "2026-01-24"
 }

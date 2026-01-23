@@ -14,6 +14,10 @@
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\opengl32sw.dll',
    'BINARY'),
+  ('PySide6\\plugins\\tls\\qcertonlybackend.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\tls\\qcertonlybackend.dll',
+   'BINARY'),
   ('PySide6\\plugins\\networkinformation\\qnetworklistmanager.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\networkinformation\\qnetworklistmanager.dll',
@@ -22,57 +26,9 @@
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\tls\\qschannelbackend.dll',
    'BINARY'),
-  ('PySide6\\plugins\\tls\\qcertonlybackend.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\tls\\qcertonlybackend.dll',
-   'BINARY'),
   ('PySide6\\plugins\\tls\\qopensslbackend.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\tls\\qopensslbackend.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qwebp.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwebp.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qjpeg.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qjpeg.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\iconengines\\qsvgicon.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\iconengines\\qsvgicon.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qico.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qico.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qtga.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtga.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qgif.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qgif.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\platforms\\qminimal.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qminimal.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qtiff.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtiff.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\platforms\\qoffscreen.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qoffscreen.dll',
    'BINARY'),
   ('PySide6\\plugins\\platforms\\qwindows.dll',
    'C:\\Users\\Yassine '
@@ -86,17 +42,61 @@
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwbmp.dll',
    'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qpdf.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qpdf.dll',
+   'BINARY'),
   ('PySide6\\plugins\\platforms\\qdirect2d.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qdirect2d.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
    'BINARY'),
   ('PySide6\\plugins\\imageformats\\qicns.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qicns.dll',
    'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qpdf.dll',
+  ('PySide6\\plugins\\imageformats\\qtiff.dll',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qpdf.dll',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qgif.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qtga.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qminimal.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qjpeg.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qoffscreen.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qico.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\iconengines\\qsvgicon.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\plugins\\iconengines\\qsvgicon.dll',
    'BINARY'),
   ('_zstd.pyd',
    'C:\\Users\\Yassine '
@@ -174,29 +174,25 @@
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\shiboken6\\MSVCP140.dll',
    'BINARY'),
-  ('PySide6\\Qt6Core.dll',
+  ('PySide6\\Qt6Gui.dll',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Core.dll',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Gui.dll',
    'BINARY'),
   ('PySide6\\Qt6Widgets.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Widgets.dll',
    'BINARY'),
-  ('PySide6\\Qt6Gui.dll',
+  ('PySide6\\Qt6Core.dll',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Gui.dll',
-   'BINARY'),
-  ('VCRUNTIME140_1.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\AppData\\Local\\Python\\pythoncore-3.14-64\\VCRUNTIME140_1.dll',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Core.dll',
    'BINARY'),
   ('PySide6\\Qt6Network.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Network.dll',
    'BINARY'),
-  ('PySide6\\Qt6VirtualKeyboard.dll',
+  ('VCRUNTIME140_1.dll',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6VirtualKeyboard.dll',
+   'Saddiki\\AppData\\Local\\Python\\pythoncore-3.14-64\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('PySide6\\Qt6Svg.dll',
    'C:\\Users\\Yassine '
@@ -205,6 +201,10 @@
   ('PySide6\\Qt6Pdf.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Pdf.dll',
+   'BINARY'),
+  ('PySide6\\Qt6VirtualKeyboard.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6VirtualKeyboard.dll',
    'BINARY'),
   ('libcrypto-3.dll',
    'C:\\Users\\Yassine '
@@ -222,6 +222,18 @@
    'C:\\Users\\Yassine '
    'Saddiki\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libffi-8.dll',
    'BINARY'),
+  ('PySide6\\pyside6.abi3.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\pyside6.abi3.dll',
+   'BINARY'),
+  ('PySide6\\VCRUNTIME140.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('PySide6\\VCRUNTIME140_1.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\VCRUNTIME140_1.dll',
+   'BINARY'),
   ('PySide6\\MSVCP140.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\MSVCP140.dll',
@@ -230,25 +242,13 @@
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\shiboken6\\shiboken6.abi3.dll',
    'BINARY'),
-  ('PySide6\\VCRUNTIME140_1.dll',
+  ('shiboken6\\VCRUNTIME140_1.dll',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\VCRUNTIME140_1.dll',
-   'BINARY'),
-  ('PySide6\\VCRUNTIME140.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\VCRUNTIME140.dll',
-   'BINARY'),
-  ('PySide6\\pyside6.abi3.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\pyside6.abi3.dll',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\shiboken6\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('shiboken6\\VCRUNTIME140.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\shiboken6\\VCRUNTIME140.dll',
-   'BINARY'),
-  ('shiboken6\\VCRUNTIME140_1.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\shiboken6\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('PySide6\\MSVCP140_2.dll',
    'C:\\Users\\Yassine '
@@ -258,25 +258,25 @@
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\MSVCP140_1.dll',
    'BINARY'),
-  ('PySide6\\Qt6Quick.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Quick.dll',
-   'BINARY'),
   ('PySide6\\Qt6Qml.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Qml.dll',
+   'BINARY'),
+  ('PySide6\\Qt6Quick.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6Quick.dll',
    'BINARY'),
   ('PySide6\\Qt6QmlMeta.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6QmlMeta.dll',
    'BINARY'),
-  ('PySide6\\Qt6OpenGL.dll',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6OpenGL.dll',
-   'BINARY'),
   ('PySide6\\Qt6QmlModels.dll',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6QmlModels.dll',
+   'BINARY'),
+  ('PySide6\\Qt6OpenGL.dll',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\Qt6OpenGL.dll',
    'BINARY'),
   ('PySide6\\Qt6QmlWorkerScript.dll',
    'C:\\Users\\Yassine '
@@ -289,369 +289,353 @@
   ('app\\state.json',
    'C:\\Users\\Yassine Saddiki\\Desktop\\SaaS\\TimerKiller\\app\\state.json',
    'DATA'),
-  ('PySide6\\translations\\qt_help_tr.qm',
+  ('PySide6\\translations\\qt_help_nn.qm',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_tr.qm',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nn.qm',
    'DATA'),
   ('PySide6\\translations\\qtbase_sk.qm',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_sk.qm',
    'DATA'),
-  ('PySide6\\translations\\qtbase_tr.qm',
+  ('PySide6\\translations\\qt_da.qm',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_tr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ar.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ar.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ja.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ja.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_bg.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_bg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_uk.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_uk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_lt.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_lt.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_hu.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_hu.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ar.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ja.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ja.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ko.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_hu.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_hu.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_pl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pl.qm',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_da.qm',
    'DATA'),
   ('PySide6\\translations\\qt_help_it.qm',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_it.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_tr.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_tr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_lv.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lv.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_cs.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_cs.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_nn.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_nn.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_sv.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_sv.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ko.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ko.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_pt_BR.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_BR.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_uk.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_uk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_en.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_en.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_hr.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_fr.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_fr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_fi.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_fi.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_es.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_es.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_he.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_pt_BR.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pt_BR.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_it.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_it.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_he.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_he.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_pt_PT.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_PT.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ru.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ru.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ka.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ka.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_es.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_es.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_lv.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_lv.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_de.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_da.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_da.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_pl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ja.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ja.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ca.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ca.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_en.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_en.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_de.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_de.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ca.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ko.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ko.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_da.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_da.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ar.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ar.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_gl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_gl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_lg.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_lg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_fa.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_fa.qm',
-   'DATA'),
   ('PySide6\\translations\\qt_bg.qm',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_bg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_it.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_it.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ka.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ka.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_zh_CN.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_CN.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_hr.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_hr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_fa.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fa.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_da.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_da.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_lg.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_sk.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_sk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_nl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_nl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_pl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_pl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_gl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_gl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_hu.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hu.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_uk.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_uk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_gd.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_gd.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_sv.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sv.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_pt_BR.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pt_BR.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_zh_CN.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_CN.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_bg.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_bg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_cs.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_zh_TW.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_TW.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_en.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_en.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_es.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_es.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_zh_TW.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_TW.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_nl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_fi.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fi.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_sl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_sl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ru.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ru.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_hr.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_hr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_fr.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_nl.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ca.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ca.qm',
    'DATA'),
   ('PySide6\\translations\\qtbase_ru.qm',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ru.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_nn.qm',
+  ('PySide6\\translations\\qt_hu.qm',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nn.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ka.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ka.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_de.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_de.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_nn.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nn.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_zh_CN.qm',
-   'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_CN.qm',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_hu.qm',
    'DATA'),
   ('PySide6\\translations\\qt_help_sk.qm',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sk.qm',
    'DATA'),
+  ('PySide6\\translations\\qtbase_en.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_fa.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fa.qm',
+   'DATA'),
   ('PySide6\\translations\\qtbase_sv.qm',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_sv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_da.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_da.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_tr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_sv.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_fi.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_zh_CN.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_CN.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_pl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_pl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ka.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ka.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_lt.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_lt.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_da.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_hu.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_hu.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_gl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_gl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_de.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_en.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_en.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ja.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_pt_BR.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_BR.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_bg.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_bg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_lg.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_lg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_zh_TW.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_it.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_it.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ko.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_tr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_tr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_sv.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_sv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_pt_PT.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_PT.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_he.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_fi.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ja.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_uk.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_cs.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ru.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_cs.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_cs.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_zh_TW.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_TW.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_hr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ca.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ca.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_pt_BR.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pt_BR.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_nl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_nl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_lg.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_he.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_he.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ca.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_en.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_zh_CN.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_CN.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_sl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_sl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_sl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_uk.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_hr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_hr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_uk.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_es.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_es.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ja.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ja.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_nl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ko.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ko.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_hr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_hr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_fa.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_fa.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_gd.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_cs.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_tr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_fr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_zh_TW.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_TW.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ru.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ru.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_lv.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_pl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_bg.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_de.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_de.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ka.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ka.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ka.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ka.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_nl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ca.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ca.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ar.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ar.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ko.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ko.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_nn.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_nn.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_it.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_es.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_sk.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_sk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_es.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_es.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_hu.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_lv.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_lv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ar.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_ar.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ar.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ar.qm',
    'DATA'),
   ('PySide6\\translations\\qt_gd.qm',
    'C:\\Users\\Yassine '
@@ -661,17 +645,33 @@
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_fr.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_zh_TW.qm',
+  ('PySide6\\translations\\qtbase_pt_BR.qm',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_TW.qm',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pt_BR.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_sl.qm',
+  ('PySide6\\translations\\qt_help_pl.qm',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sl.qm',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pl.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_cs.qm',
+  ('PySide6\\translations\\qt_zh_CN.qm',
    'C:\\Users\\Yassine '
-   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_cs.qm',
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_CN.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_gl.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_gl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_nn.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nn.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_de.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_de.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_fr.qm',
+   'C:\\Users\\Yassine '
+   'Saddiki\\Desktop\\SaaS\\TimerKiller\\venv\\Lib\\site-packages\\PySide6\\translations\\qt_fr.qm',
    'DATA'),
   ('base_library.zip',
    'C:\\Users\\Yassine '

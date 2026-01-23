@@ -92,6 +92,9 @@
   ('app.pomodoro',
    'C:\\Users\\Yassine Saddiki\\Desktop\\SaaS\\TimerKiller\\app\\pomodoro.py',
    'PYMODULE'),
+  ('app.startup',
+   'C:\\Users\\Yassine Saddiki\\Desktop\\SaaS\\TimerKiller\\app\\startup.py',
+   'PYMODULE'),
   ('app.state_manager',
    'C:\\Users\\Yassine '
    'Saddiki\\Desktop\\SaaS\\TimerKiller\\app\\state_manager.py',
