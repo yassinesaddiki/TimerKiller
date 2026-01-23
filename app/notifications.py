@@ -6,10 +6,10 @@ Displays motivational pop-ups when blocked apps are detected.
 
 import logging
 from PySide6.QtWidgets import (
-    QDialog, QVBoxLayout, QLabel, QPushButton, QMovie
+    QDialog, QVBoxLayout, QLabel, QPushButton
 )
 from PySide6.QtCore import Qt, QTimer
-from PySide6.QtGui import QPixmap, QFont
+from PySide6.QtGui import QPixmap, QFont, QMovie
 
 logger = logging.getLogger(__name__)
 
