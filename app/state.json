@@ -1,8 +1,10 @@
 {
   "daily_goal_minutes": 180,
-  "focused_minutes_today": 0,
+  "focused_minutes_today": 1,
   "pomodoro_active": false,
   "pomodoro_start_ts": null,
-  "blocked_apps": [],
-  "last_reset_date": ""
+  "blocked_apps": [
+    "chrome.exe"
+  ],
+  "last_reset_date": "2026-01-23"
 }
