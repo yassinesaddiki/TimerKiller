@@ -1,10 +1,14 @@
 """
-TimerKiller Main Entry Point
+Main Entry Point — app/main.py
 
-Bootstraps the application:
-1. Initializes state
-2. Starts background enforcer thread
-3. Launches PySide6 UI
+CONTEXT:
+- Bootstraps the whole app; this is the only module allowed to wire the
+  core/enforcement/ui packages together (keeps them decoupled from each other).
+- Startup sequence: (1) init state, (2) start blocker enforcer as a daemon
+  thread, (3) launch the PySide6 UI and block on the Qt event loop.
+- Also contains add_to_windows_startup(), a registry helper kept here since
+  it's invoked only at bootstrap (see app.system.startup for the toggle used by the UI).
+- Logs to app/logs/timerkiller.log in addition to stdout.
 """
 
 import sys
@@ -15,7 +19,8 @@ from pathlib import Path
 
 from PySide6.QtWidgets import QApplication
 
-from . import state_manager, blocker
+from .core import state_manager
+from .enforcement import blocker
 from .ui import TimerKillerUI
 
 # Configure logging
@@ -24,16 +29,16 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler(Path(__file__).parent / "timerkiller.log")
+        logging.FileHandler(Path(__file__).parent / "logs" / "timerkiller.log")
     ]
 )
 logger = logging.getLogger(__name__)
 
 
 def add_to_windows_startup():
-    """
+    r"""
     Add TimerKiller to Windows startup registry.
-    
+
     Creates entry in:
     HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
     """

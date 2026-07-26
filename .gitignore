@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# Build artifacts (PyInstaller)
+build/
+dist/
+
+# Runtime data / logs (regenerated on first run)
+app/data/*.json
+app/logs/*.log
+
+# Editor/OS
+.vscode/
+.idea/
+Thumbs.db

@@ -9,7 +9,7 @@ a = Analysis(
     binaries=[],
     datas=[
         ('app/Media', 'app/Media'),
-        ('app/state.json', 'app'),
+        ('app/data/state.json', 'app/data'),
     ],
     hiddenimports=['PySide6.QtGui', 'PySide6.QtCore', 'PySide6.QtWidgets', 'psutil'],
     hookspath=[],
