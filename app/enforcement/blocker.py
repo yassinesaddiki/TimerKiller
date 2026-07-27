@@ -2,7 +2,8 @@
 Application Blocker Module — app/enforcement/blocker.py
 
 CONTEXT:
-- Background enforcement loop: kills blocked processes while daily goal is unmet.
+- Background enforcement loop: kills blocked processes while unblocked
+  (state_manager.is_unblocked(): goal met OR all tasks done) is False.
 - Runs in a daemon thread started by app.main (must survive UI being closed).
 - Polls every ~1.5s; cools down repeat notifications per-process (NOTIFICATION_COOLDOWN).
 - Never raises out of the loop — all psutil errors are caught and logged.
@@ -50,16 +51,16 @@ def start_enforcer():
             
             # Load current state
             state = state_manager.load_state()
-            
-            goal_met = state['focused_minutes_today'] >= state['daily_goal_minutes']
-            
-            if goal_met:
-                # Goal met, all apps allowed
-                logger.debug("Goal met. No blocking active.")
+
+            unblocked = state_manager.is_unblocked()
+
+            if unblocked:
+                # Goal met or all tasks done, all apps allowed
+                logger.debug("Unblocked (goal met or tasks done). No blocking active.")
                 time.sleep(2)
                 continue
-            
-            # Goal NOT met, enforce blocking
+
+            # Still blocked, enforce
             blocked_apps = state['blocked_apps']
             
             if not blocked_apps:
@@ -113,12 +114,10 @@ def is_app_blocked(app_name):
     Returns:
         bool: True if app is blocked and goal not met
     """
-    state = state_manager.load_state()
-    goal_met = state['focused_minutes_today'] >= state['daily_goal_minutes']
-    
-    if goal_met:
+    if state_manager.is_unblocked():
         return False
-    
+
+    state = state_manager.load_state()
     return app_name.lower() in [app.lower() for app in state['blocked_apps']]
 
 
@@ -129,12 +128,10 @@ def get_blocked_processes():
     Returns:
         list: List of process names that are blocked
     """
-    state = state_manager.load_state()
-    goal_met = state['focused_minutes_today'] >= state['daily_goal_minutes']
-    
-    if goal_met:
+    if state_manager.is_unblocked():
         return []
-    
+
+    state = state_manager.load_state()
     blocked_list = []
     blocked_apps = state['blocked_apps']
     

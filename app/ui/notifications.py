@@ -3,6 +3,7 @@ Blocking Notification Dialog — app/ui/notifications.py
 
 CONTEXT:
 - Modal pop-up shown when a blocked process was killed; purely presentational.
+- Picks a random line from MOTIVATION_MESSAGES each time, so it stays fresh.
 - Falls back to emoji if no GIF is found under app/Media/.
 - Exposes: BlockingNotificationDialog (QDialog subclass), .show_modal().
 - Used by: app.ui.main_window.TimerKillerUI.process_notifications().
@@ -11,6 +12,7 @@ CONTEXT:
 
 import logging
 import os
+import random
 from PySide6.QtWidgets import (
     QDialog, QVBoxLayout, QLabel, QPushButton
 )
@@ -18,6 +20,17 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap, QFont, QMovie
 
 logger = logging.getLogger(__name__)
+
+# Rotated at random so the message doesn't go stale after the tenth time.
+MOTIVATION_MESSAGES = [
+    "You are working on your dreams.\nYou are not that man anymore.\nFinish what you started.",
+    "This isn't the version of you that you're trying to become.\nGet back to it.",
+    "Every minute here is a minute you're not becoming\nwho you said you'd be.",
+    "You already know how this ends if you keep clicking this.\nClose it. Go work.",
+    "Future you is watching. Don't let them down\nover a game.",
+    "The goal isn't finished. You know that.\nSo why are you here?",
+    "Discipline is choosing between what you want now\nand what you want most.",
+]
 
 
 class BlockingNotificationDialog(QDialog):
@@ -107,12 +120,8 @@ class BlockingNotificationDialog(QDialog):
         else:
             layout.addWidget(self.gif_label)
         
-        # Motivational message
-        motivation_label = QLabel(
-            "You're so close to unlocking this app!\n\n"
-            "Keep grinding. You've got this!\n\n"
-            "💪 NEVER GIVE UP! 💪"
-        )
+        # Motivational message (randomized so it doesn't go stale)
+        motivation_label = QLabel(random.choice(MOTIVATION_MESSAGES))
         motivation_label.setFont(QFont("Arial", 11))
         motivation_label.setAlignment(Qt.AlignCenter)
         motivation_label.setStyleSheet("color: #f39c12;")

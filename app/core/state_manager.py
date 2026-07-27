@@ -7,7 +7,9 @@ CONTEXT:
   - Load/save state atomically (temp file + rename) with a thread lock.
   - Fill in missing keys with defaults (forward-compatible schema).
   - Daily reset of focused minutes when the calendar day changes.
-  - CRUD helpers for: daily goal, focused minutes, blocked apps, pomodoro state.
+  - CRUD helpers for: daily goal, focused minutes, blocked apps, pomodoro state, tasks.
+  - is_unblocked() is the single source of truth for "should blocking be lifted"
+    (goal met OR all tasks done) — used by app.enforcement.blocker.
 - Depended on by: app.core.pomodoro, app.enforcement.blocker, app.ui.main_window.
 - Has NO dependency on UI, threading beyond its own lock, or OS-specific APIs.
 - State file lives at app/data/state.json (see STATE_FILE below).
@@ -33,7 +35,8 @@ DEFAULT_STATE = {
     "pomodoro_active": False,
     "pomodoro_start_ts": None,
     "blocked_apps": [],
-    "last_reset_date": datetime.now().strftime("%Y-%m-%d")
+    "last_reset_date": datetime.now().strftime("%Y-%m-%d"),
+    "tasks": []
 }
 
 # Thread lock for state access
@@ -235,6 +238,87 @@ def reset_if_day_changed():
         state['focused_minutes_today'] = 0
         state['last_reset_date'] = today
         save_state(state)
+
+
+def get_tasks():
+    """
+    Get list of tasks.
+
+    Returns:
+        list: Task dicts, each {id, name, done, minutes_spent, timer_active, timer_start_ts}
+    """
+    state = load_state()
+    return [t.copy() for t in state['tasks']]
+
+
+def add_task(task):
+    """
+    Append a new task dict to state.
+
+    Args:
+        task (dict): Fully-formed task record (see task_manager.new_task).
+    """
+    state = load_state()
+    state['tasks'].append(task)
+    save_state(state)
+    logger.info(f"Added task: {task.get('name')}")
+
+
+def remove_task(task_id):
+    """
+    Remove a task by id.
+
+    Args:
+        task_id (str): Task identifier
+    """
+    state = load_state()
+    original_length = len(state['tasks'])
+    state['tasks'] = [t for t in state['tasks'] if t['id'] != task_id]
+
+    if len(state['tasks']) < original_length:
+        save_state(state)
+        logger.info(f"Removed task: {task_id}")
+
+
+def update_task(task_id, **fields):
+    """
+    Merge fields into an existing task record and persist.
+
+    Args:
+        task_id (str): Task identifier
+        **fields: Fields to overwrite on the task dict
+    """
+    state = load_state()
+    for t in state['tasks']:
+        if t['id'] == task_id:
+            t.update(fields)
+            save_state(state)
+            return
+    logger.warning(f"update_task: no task with id {task_id}")
+
+
+def all_tasks_done():
+    """
+    True if there is at least one task and every task is marked done.
+
+    Returns:
+        bool
+    """
+    state = load_state()
+    tasks = state['tasks']
+    if not tasks:
+        return False
+    return all(t.get('done') for t in tasks)
+
+
+def is_unblocked():
+    """
+    Overall unblock condition: daily focus goal met OR all tasks completed.
+
+    Returns:
+        bool: True if blocked apps should be allowed to run
+    """
+    return is_goal_met() or all_tasks_done()
 
 
 def get_pomodoro_state():

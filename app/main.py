@@ -109,6 +109,7 @@ def main():
     # Step 3: Launch PySide6 UI
     try:
         app = QApplication(sys.argv)
+        app.setQuitOnLastWindowClosed(False)  # hiding to tray must not exit the app
         window = TimerKillerUI()
         window.show()
         logger.info("UI window shown")

@@ -18,23 +18,37 @@ app/
   main.py               # composition root: wires core+enforcement+ui together
   core/                 # domain logic — no UI, no OS-specific deps
     state_manager.py    # single source of truth: app/data/state.json (thread-safe, atomic writes)
+                         # also owns is_unblocked() = goal met OR all tasks done
     pomodoro.py          # focus-session timing logic (timestamp-based, crash-resilient)
+    task_manager.py      # task CRUD + per-task timer (timestamp-based, mirrors pomodoro.py)
   enforcement/          # process killing — runs independently of the UI
     blocker.py           # background poll loop (daemon thread), kills blocked processes
+                          # while state_manager.is_unblocked() is False
     game_detection.py    # heuristics to categorize processes (games/chat/other)
   system/                # OS integration, isolated from domain logic
     startup.py            # Windows registry "run on login" toggle
   ui/                    # PySide6 presentation layer only
-    main_window.py        # TimerKillerUI, ProcessSelectorDialog, TimerCircle
-    notifications.py      # BlockingNotificationDialog (motivational pop-up)
+    main_window.py        # TimerKillerUI, ProcessSelectorDialog, TimerCircle, tray icon
+    notifications.py      # BlockingNotificationDialog (randomized motivational pop-up)
+    close_dialog.py       # CloseConfirmDialog — 5s forced wait before hiding to tray
+    task_widget.py        # TaskListWidget — add/check-off/timer/delete tasks
   data/                  # runtime state (state.json) — gitignored, regenerated on first run
   logs/                  # runtime logs — gitignored
   Media/                 # bundled GIF assets for notifications
 ```
 
 ## Key invariants / behavior to preserve
-- **The enforcer thread must never stop when the UI window closes** — it's a
+- **The X button never quits the app.** `TimerKillerUI.closeEvent` shows
+  `CloseConfirmDialog` (confirm button locked for 5s) and, if confirmed, hides
+  the window to a `QSystemTrayIcon` instead of closing. The only real exit is
+  the tray menu's "Quit", which sets a `_force_quit` flag before calling
+  `QApplication.quit()`. `app.main` sets `setQuitOnLastWindowClosed(False)` so
+  hiding never accidentally exits the process.
+- **The enforcer thread must never stop when the UI window closes/hides** — it's a
   daemon thread started once in `app.main.main()`, independent of the Qt event loop.
+- **Unblocking is `state_manager.is_unblocked()`**: daily goal met OR all tasks
+  done (only counts if at least one task exists). `blocker.py` and
+  `TimerKillerUI` must go through this function, never re-derive the condition.
 - `blocker.py`'s poll loop must never raise out of its `while True` — all
   `psutil` errors are caught; a critical exception backs off 5s and continues.
 - `state_manager.py` is the **only** module that touches `app/data/state.json`.
